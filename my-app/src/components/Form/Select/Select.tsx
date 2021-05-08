@@ -6,6 +6,8 @@ import {
   MenuItem,
 } from "@material-ui/core";
 
+import { useStyles } from "./Select.styles";
+
 interface SelectOption {
   label: string;
   value: string | number;
@@ -20,15 +22,27 @@ type Props = {
   id: string;
 };
 
-const Select = ({ handleChange, value, items, name, label, id }: Props) => {
+const Select = ({
+  handleChange,
+  value,
+  items,
+  name,
+  label,
+  id,
+}: Props): JSX.Element => {
   const menuItems = items.map((item: SelectOption) => (
     <MenuItem value={item.value} key={item.value} data-testid={`${id}value`}>
       {item.label}
     </MenuItem>
   ));
+  const classes = useStyles();
   return (
-    <>
-      <InputLabel id={`${id}InputLabel`} data-testid={`${id}InputLabel`}>
+    <div className={classes.root}>
+      <InputLabel
+        id={`${id}InputLabel`}
+        data-testid={`${id}InputLabel`}
+        className={classes.inputLabel}
+      >
         {label}
       </InputLabel>
       <MaterialSelect
@@ -41,7 +55,7 @@ const Select = ({ handleChange, value, items, name, label, id }: Props) => {
       >
         {menuItems}
       </MaterialSelect>
-    </>
+    </div>
   );
 };
 
