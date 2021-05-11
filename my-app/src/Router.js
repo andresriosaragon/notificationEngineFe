@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import { SampleDataTable } from "./pages/SamplePage";
+import { FormPage } from "./pages/FormPage";
 
 function Index() {
   return <h2>Home</h2>;
@@ -17,16 +18,17 @@ const AppRouter = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/products/1">First Product</Link>
+              <Link to="/products/1">Table</Link>
             </li>
             <li>
-              <Link to="/products/2">Second Product</Link>
+              <Link to="/form">Form</Link>
             </li>
           </ul>
         </nav>
 
         <Route path="/" exact component={Index} />
         <Route path="/products/:id" component={SampleDataTable} />
+        <Route path="/form" component={FormPage} />
       </div>
     </Router>
   );
