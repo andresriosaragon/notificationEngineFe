@@ -4,7 +4,7 @@ This is a WIP project made as showcase of some of the techniques I use in Fe dev
 
 - Creating custom components based on existing libraries
 
-- Using typescript with React
+- Using typescript with React and mixing typescript with vanilla js
 
 - Using hooks
 
@@ -16,9 +16,9 @@ This is a WIP project made as showcase of some of the techniques I use in Fe dev
 
 - Using responsive components based on css breakpoints
 
-##### Upcoming work:
+- Using recoil as a state management library. I have experience with redux and have used mobx as well
 
-- Use a state management library (I currently use Redux, but I will implement Recoil on this project)
+##### Upcoming work:
 
 - Implement unit tests with jest
 

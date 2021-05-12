@@ -1,5 +1,8 @@
 import React from "react";
+import { useRecoilValue } from "recoil";
+import { Card, Typography } from "@material-ui/core";
 
+import { userAtom } from "../recoil/age/age.atom";
 import { DefaultTable } from "../components";
 
 const sampleData = [
@@ -14,8 +17,21 @@ const sampleColumnDefinitions = [
   { dataKey: "description", render: (row: any) => row.description },
 ];
 
-const SampleDataTable = () => (
-  <DefaultTable data={sampleData} columnDefinitions={sampleColumnDefinitions} />
-);
+const SampleDataTable = () => {
+  const user = useRecoilValue(userAtom);
+  return (
+    <>
+      <Card variant="outlined">
+        <Typography variant="h3" component="h2" gutterBottom>
+          User: {user.name}
+        </Typography>
+      </Card>
+      <DefaultTable
+        data={sampleData}
+        columnDefinitions={sampleColumnDefinitions}
+      />
+    </>
+  );
+};
 
 export { SampleDataTable };
