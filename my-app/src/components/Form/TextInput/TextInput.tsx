@@ -1,6 +1,7 @@
 // Render Prop
 import React from "react";
 import { TextField, InputLabel } from "@material-ui/core";
+
 import { useStyles } from "./TextInput.styles";
 
 type Props = {
@@ -8,9 +9,10 @@ type Props = {
   label: string;
   inputLabel?: string;
   id: string;
+  handleChange: (event: React.ChangeEvent<{ name?: string }>) => void;
 };
 
-const TextInput = ({ inputLabel, id, name, label }: Props) => {
+const TextInput = ({ inputLabel, id, name, label, handleChange }: Props) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -28,6 +30,7 @@ const TextInput = ({ inputLabel, id, name, label }: Props) => {
         data-testid={id}
         label={!inputLabel && label}
         name={name}
+        onChange={handleChange}
       />
     </div>
   );
