@@ -30,7 +30,6 @@ const Select = ({
   label,
   id,
 }: Props): JSX.Element => {
-  console.log(items);
   const menuItems = items.map((item: SelectOption) => (
     <MenuItem value={item.value} key={item.value} data-testid={`${id}value`}>
       {item.label}
