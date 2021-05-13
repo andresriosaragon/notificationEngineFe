@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
-import { SampleDataTable } from "./pages/SamplePage";
+import { SampleDataTable } from "./pages/TablePage";
 import { FormPage } from "./pages/FormPage";
 import { useStyles } from "./Router.styles";
 

@@ -14,6 +14,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "clsx": "^1.1.1",
+    "cypress": "7.3.0",
     "faker": "^5.5.3",
     "formik": "^2.2.6",
     "install": "^0.13.0",
@@ -56,6 +57,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "json-server": "node .json-server/server.js",
+    "cy:open": "cypress open --project .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

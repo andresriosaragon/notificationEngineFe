@@ -13,7 +13,10 @@ const Body = ({ data, columnDefinitions }: Props): JSX.Element => (
     {data.map((row) => (
       <TableRow key={row.id}>
         {columnDefinitions.map((key: ColumnDefinition) => (
-          <TableCell key={`${row.id}${key.dataKey}`}>
+          <TableCell
+            key={`${row.id}${key.dataKey}`}
+            data-testid={`${row.id}-${row[key.dataKey]}`}
+          >
             {key.render ? key.render(row) : row[key.dataKey]}
           </TableCell>
         ))}

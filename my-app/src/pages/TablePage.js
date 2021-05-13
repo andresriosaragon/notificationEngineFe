@@ -3,20 +3,24 @@ import { useSelector, useDispatch } from "react-redux";
 import { Card, Typography } from "@material-ui/core";
 
 import { DefaultTable } from "../components";
-import { fetchSource } from "../features/source/sourceApiCalls";
-import { sourceSelector } from "../features/source/sourceSelectors";
+import { fetchSources } from "../features/source/sourceApiCalls";
+import { sourcesSelector } from "../features/source/sourceSelectors";
 
 const sampleColumnDefinitions = [
   { dataKey: "name", render: (row) => row.name, title: "Name" },
-  { dataKey: "description", render: (row) => row.description },
+  {
+    dataKey: "industry",
+    render: (row) => row.industry,
+    title: "Industry",
+  },
 ];
 
 const SampleDataTable = () => {
-  const { loading, status, results } = useSelector(sourceSelector);
+  const { loading, status, results } = useSelector(sourcesSelector);
   const dispatch = useDispatch();
   useEffect(() => {
     if (status === "idle") {
-      dispatch(fetchSource());
+      dispatch(fetchSources());
     }
   }, [status, dispatch]);
   return (

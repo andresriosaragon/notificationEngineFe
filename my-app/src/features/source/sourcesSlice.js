@@ -6,26 +6,19 @@
   are written in a 'mutating' fashion.
 */
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchSource } from "./sourceApiCalls";
+import { fetchSources } from "./sourceApiCalls";
 import {
   createFetchListReducers,
   fetchListInitialState,
 } from "../helpers/createFetchReducers";
 
-const sourceSlice = createSlice({
-  name: "source",
+const sourcesSlice = createSlice({
+  name: "sources",
   initialState: fetchListInitialState,
-  reducers: {
-    newAction: (state) => {
-      state.status = "failed";
-    },
-  },
+  reducers: {},
   extraReducers: {
-    ...createFetchListReducers(fetchSource),
+    ...createFetchListReducers(fetchSources),
   },
 });
 
-const { newAction } = sourceSlice.actions;
-
-const sourceSliceReducer = sourceSlice.reducer;
-export { newAction, sourceSliceReducer };
+export { sourcesSlice };
