@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@react-hook/window-size": "^3.0.7",
+    "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -13,17 +14,21 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "clsx": "^1.1.1",
+    "faker": "^5.5.3",
     "formik": "^2.2.6",
     "install": "^0.13.0",
+    "json-server": "^0.16.3",
     "module-alias": "^2.2.2",
     "npm": "^7.12.0",
     "ramda": "^0.27.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "recoil": "^0.2.0",
+    "redux": "^4.1.0",
     "typescript": "^4.1.2",
+    "uuidv4": "^6.2.8",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
@@ -50,6 +55,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "json-server": "node .json-server/server.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { RecoilRoot } from "recoil";
+import { Provider } from "react-redux";
 
+import { store } from "./store/store";
 import { AppRouter } from "./Router";
 import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <RecoilRoot>
+    <Provider store={store}>
       <AppRouter />
-    </RecoilRoot>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -8,6 +8,13 @@ const useStyles = makeStyles(
         minWidth: 150,
       },
     },
+    loading: {
+      marginLeft: "auto",
+      marginRight: "auto",
+      marginTop: 40,
+      height: 50,
+      width: 40,
+    },
   },
   { name: "ResponsiveFormContainer" }
 );

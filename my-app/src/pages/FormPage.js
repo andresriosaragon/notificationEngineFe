@@ -1,21 +1,16 @@
 import React from "react";
 import { useFormik } from "formik";
-import { useRecoilState } from "recoil";
 import { useHistory } from "react-router-dom";
 
 import { Card, Typography } from "@material-ui/core";
 
-import { userAtom } from "../recoil/age/age.atom";
-
 import { Select, TextInput, ResponsiveFormContainer } from "../components/Form";
 
 const FormPage = () => {
-  const [user, setUser] = useRecoilState(userAtom);
   const history = useHistory();
   const formik = useFormik({
-    initialValues: user,
-    onSubmit: (values) => {
-      setUser(values);
+    initialValues: {},
+    onSubmit: () => {
       history.push("/table");
     },
   });
