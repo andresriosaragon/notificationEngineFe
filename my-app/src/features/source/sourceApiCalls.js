@@ -1,12 +1,13 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createFetchThunk } from "../helpers/createFetchThunk";
 
-const fetchSource = createAsyncThunk("fetchSource", async () => {
-  const response = await fetch("http://localhost:3007/sources", {
-    method: "GET",
-    headers: {},
-  });
-  const json = await response.json();
-  return json;
+const fetchSources = createFetchThunk({
+  callName: "fetchSource",
+  url: "http://localhost:3007/sources",
 });
 
-export { fetchSource };
+const fetchIndustries = createFetchThunk({
+  callName: "fetchIndustries",
+  url: "http://localhost:3007/industries",
+});
+
+export { fetchSources, fetchIndustries };

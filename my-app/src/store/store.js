@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { sourceSliceReducer } from "../features/source/sourceSlice";
+import { sourceReducer } from "../features/source/sourceFeature";
 
 const store = configureStore({
   reducer: {
-    source: sourceSliceReducer,
+    source: sourceReducer,
   },
 });
 

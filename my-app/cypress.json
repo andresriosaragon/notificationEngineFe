@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1366,
+  "viewportHeight": 768,
+  "projectId": "g1t7j3",
+  "retries": {
+    "runMode": 1,
+    "openMode": 3
+  }
+}
