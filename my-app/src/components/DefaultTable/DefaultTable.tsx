@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Table, TableContainer } from "@material-ui/core";
+import { Table, TableContainer, CircularProgress } from "@material-ui/core";
 
 import { Body } from "./Body";
 import { Head } from "./Head";
@@ -10,17 +10,24 @@ import { ColumnDefinition } from "./types";
 type Props = {
   data: any[];
   columnDefinitions: ColumnDefinition[];
+  loading: boolean;
 };
 
-const DefaultTable = ({ data, columnDefinitions }: Props) => {
+const DefaultTable = ({ data, columnDefinitions, loading }: Props) => {
   const classes = useStyles();
 
   return (
     <TableContainer>
-      <Table className={classes.table}>
-        <Head columnDefinitions={columnDefinitions} />
-        <Body data={data} columnDefinitions={columnDefinitions} />
-      </Table>
+      {loading ? (
+        <div className={classes.loading}>
+          <CircularProgress />{" "}
+        </div>
+      ) : (
+        <Table className={classes.table}>
+          <Head columnDefinitions={columnDefinitions} />
+          <Body data={data} columnDefinitions={columnDefinitions} />
+        </Table>
+      )}
     </TableContainer>
   );
 };

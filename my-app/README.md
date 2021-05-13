@@ -2,9 +2,9 @@
 
 This is a WIP project made as showcase of some of the techniques I use in Fe development
 
-- Creating custom components based on existing libraries
+- Using typescript with React and mixing typescript with vanilla js for parts of the application where the typing is not well understood yet. For example in the redux configuration. That way a project can progressively adopt type safety.
 
-- Using typescript with React and mixing typescript with vanilla js
+- Creating custom components based on existing libraries
 
 - Using hooks
 
@@ -16,7 +16,9 @@ This is a WIP project made as showcase of some of the techniques I use in Fe dev
 
 - Using responsive components based on css breakpoints
 
-- Using recoil as a state management library. I have experience with redux and have used mobx as well
+- Using redux as a state management library. I have experience with recoil and have used mobx as well
+
+- Using json-server so I can develop before having a fully implemented api
 
 ##### Upcoming work:
 
