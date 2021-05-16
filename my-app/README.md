@@ -27,5 +27,3 @@ This is a WIP project made as showcase of some of the techniques I use in Fe dev
 
 - Implement unit tests with jest
   (haven't implemented yet here. I have some in my other repo https://github.com/splinermann/notificationEngine)
-
-- Implement storybook
